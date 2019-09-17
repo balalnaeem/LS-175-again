@@ -1,0 +1,18 @@
+
+<h4><%= @title %></h4>
+<ul>
+  <% @users.each do |name, details| %>
+    <% if name.to_s == @title %>
+    <li>Email: <%= details[:email] %></li>
+    <li>Interests: <%= details[:interests].join(', ') %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<% @users.keys.each do |user| %>
+  <% next if user.to_s == @title %>
+  <li>
+    <a href="/<%= user %>"> <%= user %> </a>
+  </li>
+<% end %>
+

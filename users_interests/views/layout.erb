@@ -1,0 +1,10 @@
+<html>
+  <head>
+      <title><%= @title %></title>
+    </head>
+  <body>
+    <%= yield %>
+    <p></p>
+    <em>There are <%= @users.keys.size %> users with total interests of <%= count_interests %>.</em>
+  </body>
+</html>
